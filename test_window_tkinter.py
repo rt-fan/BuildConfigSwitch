@@ -24,14 +24,6 @@ class Example(Frame):
         y = (sh - h) / 2
         self.parent.geometry('%dx%d+%d+%d' % (w, h, x, y))
 
-        # quitButton = Button(self, text="Закрыть окно", command=self.quit)
-        # quitButton.place(x=10, y=150)
-
-        # comboExample = ttk.Combobox(self, values=[ "January", "February", "March", "April"], state="readonly")
-        #
-        # comboExample.grid(column=0, row=1)
-        # comboExample.current(0)
-
         varaints = {'D-Link': ['DES 1100-06', 'DES 1100-10', 'DES 1210-28', 'DES 1210-52', 'DES 3528', 'DES 3552',
                                'DGS 1100-06', 'DGS 1100-10', 'DGS 1210-28', 'DGS 1210-52'],
                     'Huawei': ['Quidway S2326TP-EI', 'Quidway S2352P-EI'],
@@ -103,22 +95,10 @@ class Example(Frame):
             s = config
             f.write(s)
             f.close()
-
-
-        # button_save = Button(self, text='Click to Open File', command=save_config)
-        # button_save.place(x=200, y=200)
-
-        # text = Text(self, width=50, height=1)
-        # text.grid(columnspan=2)
+            
 
         btn = Button(self, text="Сохранить конфиг", command=save_config)  # Кнопка Сбора конфига
         btn.place(x=10, y=85)
-
-        # def but():
-        #     print(combo_depend.get())
-
-        # btn2 = Button(self, text='кнопка', command=but)
-        # btn2.place(x=10, y=100)
 
 def main():
     root = Tk()
