@@ -8,7 +8,7 @@ ip_network = '.'.join(ip_address.split('.')[:-1]) + '.1'
 
 config = '''
 #
-create account admin sbnt
+create account admin LOGIN
 PASSWD
 PASSWD
 !
