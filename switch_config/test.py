@@ -6,16 +6,16 @@ def conf(ip_address, switch_name, manager_vlan, untagged_vlan, tagged_vlan):
     ip_network = '.'.join(ip_address.split('.')[:-1]) + '.1'
     config = '''
 #
-create account admin sbnt
-sbnt@911
-sbnt@911
+create account admin LOGIN
+PASSWD
+PASSWD
 !
 enable password encryption
 !
 #
 config command_prompt ''' + switch_name + '''
 config snmp system_name ''' + switch_name + '''_''' + ip_address + '''
-config snmp system_contact Tel:91-21-11,59-99-95
+config snmp system_contact Tel:99-99-99-99
 config snmp system_location ''' + switch_name + '''
 #
 create vlan manager tag ''' + manager_vlan + '''
